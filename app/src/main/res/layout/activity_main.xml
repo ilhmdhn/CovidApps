@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            tools:ignore="UselessParent">
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="25dp">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_user"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/roboto"-->
+<!--                    android:text="Hi User"-->
+<!--                    android:textColor="#393939"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <androidx.appcompat.widget.AppCompatImageButton-->
+<!--                    android:id="@+id/btn_setting"-->
+<!--                    android:layout_width="20dp"-->
+<!--                    android:layout_height="20dp"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:background="@drawable/ic_baseline_settings_24"-->
+<!--                    android:baselineAlignBottom="false" />-->
+<!--            </RelativeLayout>-->
+
+
+            <!--       Header-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_bg_biru"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/layout_header"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Stay Safe !"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_peringatan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Kamu berada di kawasan zona merah covid-19"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:drawableLeft="@drawable/ic_baseline_gps_fixed_24"
+                        android:fontFamily="@font/roboto"
+                        android:text="Madiun"
+                        android:textColor="#FFFFFF" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_marginRight="-15dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:src="@drawable/dokter" />
+            </LinearLayout>
+
+            <!--       Header-->
+            <!--       Tanggal Update-->
+
+            <TextView
+                android:id="@+id/tv_case_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_header"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto"
+                android:text="Update perkembangan Corona di Indonesia"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTglUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_case_update"
+                android:text="Newest update August 14" />
+
+            <!--       Tanggal Update-->
+            <!--       Case Update-->
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    
+                </LinearLayout>
+            </RelativeLayout>
+
+            <Spinner
+                android:id="@+id/spinnerDaerah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"/>
+
+<!--            scrollllll-->
+            <TextView
+                android:id="@+id/tvCasePlus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="memuat"/>
+
+            <TextView
+                android:id="@+id/tvCasePlusDeath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="memuat"/>
+
+            <TextView
+                android:id="@+id/tvCasePlusSembuh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="memuat"/>
+
+            <TextView
+                android:id="@+id/tvCasePlusDirawat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="memuat"/>
+
+            <TextView
+                android:id="@+id/tvCaseOdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="memuat"/>
+
+            <TextView
+                android:id="@+id/tvCaseSpesimen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="memuat"/>
+
+            <TextView
+                android:id="@+id/tvCaseSpesimenNegatif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="memuat"/>
+
+            <TextView
+                android:id="@+id/tvCasePositif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="memuat"/>
+
+            <TextView
+                android:id="@+id/tvCaseMeninggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="memuat"/>
+
+
+            <TextView
+                android:id="@+id/tvCaseDirawat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="memuat"/>
+
+
+            <TextView
+                android:id="@+id/tvCaseSembuh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="memuat"/>
+
+
+            <!--           Case Update-->
+
+            <!--           Feeling Sick-->
+
+            <LinearLayout
+                android:id="@+id/layout_merasa_sakit"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_bg_biru"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:id="@+id/feelingSick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Kamu merasa sakit ?"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_jika"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/feelingSick"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/karantinaLayout"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:padding="10dp"
+                        android:src="@drawable/bersin" />
+                </FrameLayout>
+            </LinearLayout>
+            <!--           Feeling sick-->
+            <!--        Pencegahan-->
+
+            <TextView
+                android:id="@+id/tv_pencegahan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto"
+                android:text="Pencegahan"
+                android:textColor="#101010"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/layout_pencegahan"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:id="@+id/layoutcuciTangan"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_bg_biru"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:padding="10dp"
+                        android:src="@drawable/cuci_tangan"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/cuciTangan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:fontFamily="@font/roboto"
+                        android:text="Cuci Tangan"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layoutMasker"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_biru_square"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="-20dp"
+                        android:padding="10dp"
+                        android:src="@drawable/wajah" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Pakai Masker"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_biru_square"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="-20dp"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_distancing" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Jaga Jarak"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Corona Info</string>
+    <string name="basuhSatu">Basahi tangan, gosok sabun pada telapak tangan kemudian usap dan gosok kedua telapak tangan secara lembut dengan arah memutar.</string>
+    <string name="basuhDua">Usap dan gosok juga kedua punggung tangan secara bergantian.</string>
+    <string name="basuhTiga">Gosok sela-sela jari tangan hingga bersih</string>
+    <string name="basuhEmpat">Bersihkan ujung jari secara bergantian dengan posisi saling mengunci</string>
+    <string name="basuhLima">Gosok dan putar kedua ibu jari secara bergantian</string>
+    <string name="basuhEnam">Letakkan ujung jari ke telapak tangan kemudian gosok perlahan. Bilas dengan air bersih dan keringkan</string>
+    <string name="pembuka">WHO bersama dengan kementrian kesehatan menghimbau masyarakat agar selalu mencuci tangan dengan sabun atau hand sanitizer. lalu bagaimana cara mencuci tangan yang benar? lakukan anjuran seperti di bawah ini dengan durasi berkisar 20 – 30 detik.</string>
+    <string name="karantinaLayout">Jika kamu merasakan sakit dengan gejala covid-19 yuk karantina 14 hari disini.</string>
+</resources>
